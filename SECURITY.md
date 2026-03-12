@@ -46,7 +46,7 @@ This project is a **skill definition layer** — Markdown documents that instruc
 2. **Unplanned behavior** — incorrect command examples, wrong parameter formats, or misleading operation flows in a skill could cause the agent to execute unintended trades, transfers, or position changes.
 3. **MCP tool input** — skills define the parameter patterns that AI agents pass to trading tools. Malformed or overly permissive parameter examples could lead to invalid or harmful tool invocations.
 
-Out of scope: vulnerabilities in the `toobit` CLI itself (report those to [agent-toobit-kit](https://github.com/nicejudy/agent-toobit-kit)), Toobit's own platform, or third-party AI agent frameworks.
+Out of scope: vulnerabilities in the `toobit` CLI itself (report those to [agent-toobit-kit](https://github.com/toobit-docs/agent-kit)), Toobit's own platform, or third-party AI agent frameworks.
 
 ## Disclosure Policy
 
