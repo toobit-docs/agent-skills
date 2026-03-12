@@ -12,7 +12,7 @@ metadata:
     install:
       - id: npm
         kind: node
-        package: "@toobit_ai/toobit-trade-cli"
+        package: "toobit-trade-cli"
         bins: ["toobit"]
         label: "Install toobit CLI (npm)"
 ---
@@ -25,7 +25,7 @@ Account balance, sub-accounts, balance flow, deposits, withdrawals, and API key 
 
 1. Install `toobit` CLI:
    ```bash
-   npm install -g @toobit_ai/toobit-trade-cli
+   npm install -g toobit-trade-cli
    ```
 2. Configure credentials in `~/.toobit/config.toml`:
    ```toml

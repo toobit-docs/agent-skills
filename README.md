@@ -12,9 +12,9 @@ A collection of AI agent skills for Toobit exchange operations. Each skill is a 
 
 ## Requirements
 
-- [`toobit` CLI](https://www.npmjs.com/package/@toobit_ai/toobit-trade-cli) installed:
+- [`toobit` CLI](https://www.npmjs.com/package/toobit-trade-cli) installed:
   ```bash
-  npm install -g @toobit_ai/toobit-trade-cli
+  npm install -g toobit-trade-cli
   ```
 - For authenticated skills: Toobit API credentials configured in `~/.toobit/config.toml`
 

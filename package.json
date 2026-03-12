@@ -1,0 +1,16 @@
+{
+  "name": "toobit-agent-skills",
+  "version": "1.0.0",
+  "description": "Agent Skills for Toobit — teach AI agents to trade on Toobit using CLI commands",
+  "keywords": ["toobit", "agent", "skills", "ai", "trading", "mcp"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toobit-docs/agent-skills.git"
+  },
+  "files": [
+    "skills/**",
+    "README.md",
+    "LICENSE"
+  ]
+}
