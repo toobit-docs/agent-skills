@@ -91,7 +91,10 @@ toobit market time
 | 12 | `toobit market open-interest --symbol <sym>` | READ | Open interest for futures |
 | 13 | `toobit market index --symbol <sym>` | READ | Index price for futures |
 | 14 | `toobit market contract-ticker --symbol <sym>` | READ | Futures 24h ticker stats |
-| 15 | `toobit market long-short-ratio --symbol <sym> [--period <p>]` | READ | Long/short account ratio |
+| 15 | `toobit market contract-ticker-price --symbol <sym>` | READ | Futures last price |
+| 16 | `toobit market long-short-ratio --symbol <sym> [--period <p>]` | READ | Long/short account ratio |
+| 17 | `toobit market insurance-fund --symbol <sym>` | READ | Insurance fund balance |
+| 18 | `toobit market risk-limits --symbol <sym>` | READ | Risk limits and leverage tiers |
 
 ## Cross-Skill Workflows
 
@@ -122,7 +125,7 @@ toobit market time
 ```
 1. toobit-cex-market    toobit market ticker --symbol BTCUSDT           → spot last price
 2. toobit-cex-market    toobit market mark-price --symbol BTC-SWAP-USDT → futures mark price
-3. toobit-cex-market    toobit market index --symbol BTC-SWAP-USDT      → index price
+3. toobit-cex-market    toobit market index --symbol BTCUSDT             → index price
 ```
 
 ### Research market for strategy planning
@@ -366,13 +369,21 @@ Returns: `longShortRatio`, `longAccount`, `shortAccount`, `time`.
 
 ### Insurance Fund (Futures)
 
-Use MCP tool `market_get_insurance_fund` for the exchange insurance fund balance.
+```bash
+toobit market insurance-fund --symbol <sym> [--json]
+```
+
+Returns: insurance fund balance history for a futures symbol. Symbol must use contract format (e.g., `BTC-SWAP-USDT`).
 
 ---
 
 ### Risk Limits (Futures)
 
-Use MCP tool `market_get_risk_limits` for position risk tiers and leverage limits.
+```bash
+toobit market risk-limits --symbol <sym> [--json]
+```
+
+Returns: risk limit tiers with `level`, `maxLeverage`, `initialMargin`, `maintainMargin`, `value`. Symbol must use contract format (e.g., `BTC-SWAP-USDT`).
 
 ---
 
